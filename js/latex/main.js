@@ -3,7 +3,7 @@
  * @Createdon 2022-6-12
  * @Author Panda_YueTao
  * @Version 1.6.4
- * @Title 妈叔出品-LaTeX公式编辑器脚本
+ * @Title LaTeX公式编辑器脚本
  */
 
 import "../../css/rem.css";
@@ -48,7 +48,7 @@ class NavBarOption {
 
 class ApiOption {
   constructor() {
-    ApiOption.prototype.path_api = Config[Environment].WebAPI;
+    ApiOption.prototype.path_api = Config[ENVIRONMENT].WebAPI;
   }
 }
 
@@ -60,8 +60,8 @@ class VerifyOption {
 
 class GolbalOption {
   constructor() {
-    GolbalOption.prototype.const_boot = Config[Environment].Boot_OSS;
-    GolbalOption.prototype.const_hostName = Config[Environment].Hostname;
+    GolbalOption.prototype.const_boot = Config[ENVIRONMENT].Boot_OSS;
+    GolbalOption.prototype.const_hostName = Config[ENVIRONMENT].Hostname;
     GolbalOption.prototype.obj_autocomplete = autocomplete;
     GolbalOption.prototype.obj_common = common;
     GolbalOption.prototype.obj_eject = new Eject();

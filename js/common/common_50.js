@@ -75,7 +75,7 @@ var scriptLoader = {
     });
   },
   googleads: function () {
-    if (Environment != "development") {
+    if (ENVIRONMENT != "development") {
       document.writeln("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-164353536-1'></script>");
       document.writeln("  <script>");
       document.writeln("    window.dataLayer = window.dataLayer || [];");

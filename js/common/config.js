@@ -6,11 +6,11 @@
  * @Title 妈叔出品-LaTeX公式编辑器配置
  */
 
-const Environment = "release";
+const ENVIRONMENT = "development";
 
-const Config = {
+ const Config = {
   development: {
-    Version: "开发版" + new Date().getTime(),
+    Version: `开发版${Date.now()}`,
     MainJS: {
       latex: "/publish/latex.bundle.min.js",
       readme: "/publish/readme.bundle.min.js",
@@ -114,3 +114,4 @@ const Config = {
     },
   },
 };
+

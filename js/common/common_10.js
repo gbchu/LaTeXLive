@@ -1,5 +1,5 @@
-var headCommon = {
-  init: function () {
+const headCommon = {
+  init() {
     headCommon.loadingAnimate();
     if (document.getElementById("common_config").dataset.pagetype == "readme") {
       headCommon.preLoadMathJax();
@@ -7,7 +7,7 @@ var headCommon = {
     headCommon.googleads();
     document.body.removeChild(document.getElementById("common_10"));
   },
-  loadingAnimate: function () {
+  loadingAnimate() {
     document.writeln("<style>");
     document.writeln("    /* #region加载动画 */");
     document.writeln("    #loading {");
@@ -82,7 +82,7 @@ var headCommon = {
     document.writeln("    /* #endregion */");
     document.writeln("  </style>");
   },
-  preLoadMathJax: function () {
+  preLoadMathJax() {
     document.writeln("<script>");
     document.writeln("    window.MathJax = {");
     document.writeln("      options: {");
@@ -105,8 +105,8 @@ var headCommon = {
     // document.writeln("  <script src='https://polyfill.io/v3/polyfill.min.js?features=es6'></script>");
     document.writeln("  <script id='MathJax-script' async src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js'></script>");
   },
-  googleads: function () {
-    if (Environment != "development") {
+  googleads() {
+    if (ENVIRONMENT != "development") {
       document.writeln("  <script data-ad-client='ca-pub-4786420636728190' async");
       document.writeln("    src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>");
     }

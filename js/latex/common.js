@@ -1,4 +1,4 @@
-export var common = {
+export const common = {
   init: function (opt) {
     // $("button,input,a").attr("tabindex", "-1");
     common.PreventDefaultFileDrop(document, function () { return false; })
